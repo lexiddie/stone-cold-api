@@ -1,4 +1,4 @@
-FROM node:7
+FROM node:10
 # Create app directory
 WORKDIR /app
 # Copy package.json and package-lock.json using a wildcard
@@ -8,4 +8,4 @@ RUN npm install
 # Bundle app source
 COPY . ./app
 EXPOSE 8080
-CMD ["npm", "run start"]
+CMD ["npm", "start"]
